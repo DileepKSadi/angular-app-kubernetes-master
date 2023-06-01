@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y nodejs \
     && npm install -g react-tools
-RUN npm install -g npm@9.6.7
+RUN npm install -g @angular/cli
 RUN npm run build
 
 # stage 2
