@@ -2,7 +2,7 @@
 FROM node:latest as node
 WORKDIR /app
 COPY . .
-RUN npm install --package-lock-only
+RUN npm install -g npm@9.6.7
 RUN npm run build --prod
 
 # stage 2
