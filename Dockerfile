@@ -11,4 +11,5 @@ RUN npm install -g @angular/cli
 
 # stage 2
 FROM nginx:alpine
+WORKDIR /app
 COPY --from=node /app/dist/angular-app /usr/share/nginx/html
