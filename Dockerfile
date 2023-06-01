@@ -2,6 +2,10 @@
 FROM node:latest as node
 WORKDIR /app
 COPY . .
+RUN apt-get update \
+    && && apt-get upgrade -y \
+    && apt-get install -y nodejs \
+    && npm install -g react-tools
 RUN npm install -g npm@9.6.7
 RUN npm run build
 
