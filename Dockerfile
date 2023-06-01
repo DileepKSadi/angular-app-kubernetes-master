@@ -2,7 +2,7 @@
 FROM node:latest as node
 WORKDIR /app
 COPY . .
-RUN npm install
+RUN npm install@7.19.1
 RUN npm run build --prod
 
 # stage 2
